@@ -1,5 +1,6 @@
 package ar.com.gustavoHD.comparators;
 
+import java.util.Arrays;
 import java.util.function.Function;
 
 /**
@@ -27,6 +28,12 @@ public class MainComparator {
         Comparator<Person> cmpPerson = Comparator.comparing(Person::getSecondName)
                                             .thenComparing(Person::getFirstName)
                                             .thenComparing(Person::getAge);
+
+        Person[] persons= {new Person("Juan", "Palotes", 44),
+                            new Person("Pepe", "Argento", 40),
+                            new Person("Maria", "La del Barrio", 18)};
+
+        //Arrays.sort(persons, cmpPersonAge);
 
     }
 
