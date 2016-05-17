@@ -1,0 +1,86 @@
+Definition
+
+* A functional interface is an interface:
+    - With only one abstract method
+     - Default methods do not count
+     - Static methods do not count
+     - Methods from the Object class do not count
+
+
+
+* A functional interface may be annotated with @FunctionalInterface
+    - It is not mandatory, for legacy reasons
+    - The compiler wil tell us if an annotated interface is functional or not
+
+
+* The java.util.functionPackage
+
+    - A new package fromJava 8, withthe mostusefulfunctionalinterfaces
+    - There are 43 of them!
+
+    - Four categories:
+    1) The Consumers
+    2) The Supplier
+    3) The Functions
+    4) The Predicates
+
+
+    1) The consumers
+    A consumer consumes an object, and doesnot return anything The Consumers
+
+        public interface Consumer<T> {
+            public void accept(T t);
+        }
+
+        Consumer<String> printer    = s -> System.out.println(s);
+                                    = System.out::println;
+
+        public interface BiConsumer<T, V> {
+            public void accept(T t, V v);
+        }
+
+    2) The Supplier
+    A supplier provides an object, takes no parameter
+
+        public interface Supplier<T> {
+            public T get();
+        }
+
+        Supplier<Person> personSupplier = () -> newPerson();
+                                        = Person::new;
+
+    3) The Functions
+    A function takes an object an returns anotherobject
+
+        public interface Function<T, R> {
+            public R apply(T t);
+        }
+
+        Function<Person, Integer> ageMapper = person -> person.getAge();
+                                            = Person::getAge;
+
+        public interface BiFunction<T, V, R> {
+            public R apply(T t, V v);
+        }
+
+    A function takes an object an returns another object
+
+        public interface UnaryOperator<T> extends Function<T, T> {
+        }
+
+        public interface BinaryOperator<T> extends BiFunction<T, T, T> {
+        }
+
+    4) The Predicates
+    A predicate takes and object an return a boolean
+
+        public interface Predicate<T> {
+            public boolean test(T t);
+        }
+
+        Predicate<Person> ageGT20= person -> person.getAge() > 20;
+
+
+        public interface BiPredicate<T, U> {
+        public boolean test(T t, U u);
+        }
