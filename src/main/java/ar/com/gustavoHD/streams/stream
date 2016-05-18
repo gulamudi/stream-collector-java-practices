@@ -1,0 +1,21 @@
+definition
+
+types:
+* Froma technical point of view:
+    - a typed interface:
+        public interface Stream<T> extendsBaseStream<T, Stream<T>> {
+            // interface
+        }
+    - Also: IntStream, LongStream& DoubleStream
+
+
+
+properties
+    * A Stream does not hold any data
+        - It pulls the data it processes from a source
+    * A Stream does not modify the data it processes
+        - Because we want to process the data in parallel with no visibility issues
+    * The source maybe unbounded
+        - Which can mean it is not finite
+        - But most of the time, it only means that the size of this source is not known at build time
+
