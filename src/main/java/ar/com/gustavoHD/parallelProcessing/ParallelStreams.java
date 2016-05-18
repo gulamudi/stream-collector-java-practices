@@ -1,4 +1,4 @@
-package main.java.ar.com.gustavoHD.parallelProcessing;
+package ar.com.gustavoHD.parallelProcessing;
 
 import java.util.ArrayList;
 import java.util.List;

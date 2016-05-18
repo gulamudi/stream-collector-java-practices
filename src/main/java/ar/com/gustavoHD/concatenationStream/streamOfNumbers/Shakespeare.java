@@ -1,4 +1,4 @@
-package main.java.ar.com.gustavoHD.concatenationStream.streamOfNumbers;
+package ar.com.gustavoHD.concatenationStream.streamOfNumbers;
 
 import java.io.IOException;
 import java.nio.file.Files;

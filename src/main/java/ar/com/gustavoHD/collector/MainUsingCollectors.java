@@ -1,4 +1,4 @@
-package main.java.ar.com.gustavoHD.collector;
+package ar.com.gustavoHD.collector;
 
 import java.io.IOException;
 import java.nio.file.Files;

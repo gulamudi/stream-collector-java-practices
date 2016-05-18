@@ -1,6 +1,6 @@
-package main.java.ar.com.gustavoHD.spliterator;
+package ar.com.gustavoHD.spliterator;
 
-import main.java.ar.com.gustavoHD.spliterator.model.Person;
+import ar.com.gustavoHD.spliterator.model.Person;
 
 import java.util.Spliterator;
 import java.util.function.Consumer;

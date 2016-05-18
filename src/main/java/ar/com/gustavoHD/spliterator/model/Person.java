@@ -1,4 +1,4 @@
-package main.java.ar.com.gustavoHD.spliterator.model;
+package ar.com.gustavoHD.spliterator.model;
 
 /**
  * Created by gustavo on 09/05/16.
